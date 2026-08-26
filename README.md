@@ -6,16 +6,17 @@
 
 [![Release](https://img.shields.io/github/v/release/f1owkang/DModeEvolution?style=flat-square&label=Release&color=blue)](https://github.com/f1owkang/DModeEvolution/releases)
 [![Downloads](https://img.shields.io/github/downloads/f1owkang/DModeEvolution/total?style=flat-square&label=Downloads&color=green)](https://github.com/f1owkang/DModeEvolution/releases)
-[![License](https://img.shields.io/github/license/f1owkang/DModeEvolution?style=flat-square&color=orange)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/f1owkang/DModeEvolution?style=flat-square)](https://github.com/f1owkang/DModeEvolution/stargazers)
+![Language](https://img.shields.io/badge/Language-Shell-89e051?style=flat-square&logo=gnu-bash&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-MIUI_13_%7C_14-ff6900?style=flat-square&logo=xiaomi&logoColor=white)
+[![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)](LICENSE)
 
 [支持应用](#支持应用) · [安装使用](#安装使用) · [进阶教程](#进阶教程) · [已知问题](#已知问题) · [致谢名单](#致谢名单)
+
+</div>
 
 > [!WARNING]
 > **本项目已停止维护，仓库仅作存档保留。**<br>
 > 模块兼容 MIUI 14 / 13，但存在 **自动重启进入 Recovery**、**卡在第一屏** 等已知风险，刷入前请务必备份数据并自行评估。
-
-</div>
 
 ---
 
@@ -132,6 +133,6 @@ MIUI 通过两类配置文件控制应用的深色模式：
 
 <div align="center">
 
-**Made with ♥ by [f1owkang](https://github.com/f1owkang)**
+**Made with ❤ by [f1owkang](https://github.com/f1owkang)**
 
 </div>
