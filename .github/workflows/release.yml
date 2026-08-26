@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: 打包并发布
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 打包模块
+        run: |
+          mkdir -p dist
+          zip -r dist/DarkE.zip META-INF system module.prop customize.sh
+
+      - name: 发布 Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: DarkMode Evolution ${{ github.ref_name }}
+          body_path: changelog.md
+          files: dist/DarkE.zip

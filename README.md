@@ -1,82 +1,137 @@
-# DarkMode Evolution 23.6.23
+<div align="center">
 
-## 重要：全新~~次世代版本~~兼容 MIUI14/13，可能出现 自动重启到recovery和卡第一屏 问题
-## 支持应用
+# 🌙 DarkMode Evolution
 
-- 😋兼容良好 😔不尽人意 ？无法确定
-- 😋淘宝（com.taobao.taobao）
-- 😋学习通（com.chaoxing.mobile）
-- 😔闲鱼（com.taobao.idlefish）
-- 😋阿里巴巴（com.alibaba.wireless）
-- 😔铁路12306（com.MobileTicket）
-- 😔支付宝（com.eg.android.AlipayGphone）
-- 😋什么值得买（com.smzdm.client.android）
-- 😔抖音（com.ss.android.ugc.aweme）
-- 😋拼多多（com.xunmeng.pinduoduo）
-- ？高德地图（com.autonavi.minimap）
-- 更多应用请参见模块目录内置配置文件
+**为 MIUI 14 / 13 补全第三方应用深色模式的 Magisk 模块**
 
-## 其他事项
+[![Release](https://img.shields.io/github/v/release/f1owkang/DarkMode_Evolution?style=flat-square&label=Release&color=blue)](https://github.com/f1owkang/DarkMode_Evolution/releases)
+[![Downloads](https://img.shields.io/github/downloads/f1owkang/DarkMode_Evolution/total?style=flat-square&label=Downloads&color=green)](https://github.com/f1owkang/DarkMode_Evolution/releases)
+[![License](https://img.shields.io/github/license/f1owkang/DarkMode_Evolution?style=flat-square&color=orange)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/f1owkang/DarkMode_Evolution?style=flat-square)](https://github.com/f1owkang/DarkMode_Evolution/stargazers)
 
-- 全新版本，~~超稳定的~~兼容性
+[支持应用](#-支持应用) · [安装使用](#-安装使用) · [进阶教程](#-进阶教程) · [已知问题](#-已知问题) · [致谢](#-致谢)
 
-- 详细更新请参见changelog.md
+> [!WARNING]
+> **本项目已停止维护，仓库仅作存档保留。**<br>
+> 模块兼容 MIUI 14 / 13，但存在 **自动重启进入 Recovery**、**卡在第一屏** 等已知风险，刷入前请务必备份数据并自行评估。
 
-## 已知问题
+</div>
 
-- 部分应用自MIUI14以来已失效，努力解决中
+---
 
-- 抖音（com.ss.android.ugc.aweme）内测版提供深色模式。
+## ✨ 模块简介
 
-## 如何使用
+MIUI 的强制深色模式默认仅覆盖少量系统应用，大量第三方应用无缘深色。本模块通过补全 MIUI 的深色模式配置——总开关 `ForceDarkAppSettings.json` 与单应用增强配置 `forcedarkconfig/`——让更多应用接入系统级深色模式。刷入后，可在 **设置 → 显示 → 更多深色模式设置** 中按应用单独控制开关。
 
-1.在右侧Releases下载最新zip包
+安装脚本会在刷入时自动检测设备环境：
 
-2.进入Magisk软件内安装
+- 通过音量键交互确认安装（音量+ 确认 / 音量- 取消）
+- 自动区分 MIUI 13（`system/etc`）与 MIUI 14（`system_ext/etc`）的配置路径，无需手动选择版本
 
-3.重启手机
+## 📱 支持应用
 
-4.进入 设置-显示-更多深色模式设置 打开对应软件开关
+😋 兼容良好　😔 效果一般　❓ 未经确认
 
-## 简明教程
+| 状态 | 应用 | 包名 |
+| :--: | :-- | :-- |
+| 😋 | 淘宝 | `com.taobao.taobao` |
+| 😋 | 学习通 | `com.chaoxing.mobile` |
+| 😔 | 闲鱼 | `com.taobao.idlefish` |
+| 😋 | 阿里巴巴 | `com.alibaba.wireless` |
+| 😔 | 铁路12306 | `com.MobileTicket` |
+| 😔 | 支付宝 | `com.eg.android.AlipayGphone` |
+| 😋 | 什么值得买 | `com.smzdm.client.android` |
+| 😔 | 抖音 | `com.ss.android.ugc.aweme` |
+| 😋 | 拼多多 | `com.xunmeng.pinduoduo` |
+| ❓ | 高德地图 | `com.autonavi.minimap` |
 
-Q : 如何添加自己想深色的应用？
+> 以上仅为部分示例，完整支持列表见模块内置的 [`ForceDarkAppSettings.json`](system/etc/ForceDarkAppSettings.json) 与 [`forcedarkconfig/`](system/etc/forcedarkconfig) 目录。
 
-A : MIUI使用两个配置文件来控制应用是否使用深色，其中(ForceDarkAppSettings.json)是必须更改的，当效果不佳或者无法生效才会使用一个增强配置来控制具体效果，其位置在(forcedarkconfig)文件夹内。
+## 🚀 安装使用
 
-假设您需要添加一个应用深色，您首先查询应用包名(如com.dark.demo)，接着在(ForceDarkAppSettings.json)中的[]内添加一行
+1. 前往 [**Releases**](https://github.com/f1owkang/DarkMode_Evolution/releases) 下载最新 zip 包
+2. 打开 **Magisk** →「模块」→「从本地安装」，选择刚下载的 zip
+3. 安装过程中按提示用音量键确认（音量+ 安装 / 音量- 取消）
+4. 安装完成后重启手机
+5. 进入 **设置 → 显示 → 更多深色模式设置**，为需要的应用打开开关
 
-`{"defaultEnable":false,"overrideEnableValue":0,"packageName":"com.dark.demo","showInSettings":true}`
+## ⚠️ 已知问题
 
-其中参数defaultEnable意味着默认是否开启，可选(true/false)。参数showInSettings意味着是否在设置中显示开关。
+- 部分应用的配置自 MIUI 14 起已失效；因项目停止维护，不再跟进修复
+- 抖音（`com.ss.android.ugc.aweme`）内测版已自带深色模式，无需本模块
 
-添加之后请验证json合法性 [JSON格式校验器](https://json-online.com/check/ "点我进行验证json")。一般验证之后刷入模块就有效果了，如果没有效果，请尝试进阶教程。
+## 📖 简明教程
 
-## 进阶教程
+<details>
+<summary><b>Q：如何让模块支持我想深色化的应用？</b></summary>
 
-Q : 如何编写一个增强应用配置文件？
+MIUI 通过两类配置文件控制应用的深色模式：
 
-A : 假设您需要添加一个增强应用深色配置文件，您首先查询应用包名(如com.dark.demo)，首先在(forcedarkconfig)文件夹内，新建一个名为(com.dark.demo.json)的文件，放入如下模板。
+- **`ForceDarkAppSettings.json`**：总开关，必须修改
+- **`forcedarkconfig/`**：单应用增强配置，仅在总开关效果不佳或不生效时使用
 
-`{
+操作步骤：
+
+1. 查询目标应用的包名，例如 `com.dark.demo`
+2. 在 `ForceDarkAppSettings.json` 的 `[]` 数组中追加一行：
+
+```json
+{"defaultEnable":false,"overrideEnableValue":0,"packageName":"com.dark.demo","showInSettings":true}
+```
+
+| 参数 | 含义 |
+| :-- | :-- |
+| `defaultEnable` | 是否默认开启深色，可选 `true` / `false` |
+| `showInSettings` | 是否在系统设置中显示该应用的开关 |
+
+3. 修改后用 [JSON 格式校验器](https://json-online.com/check/) 验证文件合法性，重新刷入模块即可
+
+正常情况下到这里就能生效；若无效，请继续查看进阶教程。
+
+</details>
+
+## 🛠️ 进阶教程
+
+<details>
+<summary><b>Q：如何为应用编写增强配置文件？</b></summary>
+
+当总开关配置效果不理想时，可以为单个应用编写增强配置：
+
+1. 查询目标应用包名，例如 `com.dark.demo`
+2. 在 `forcedarkconfig/` 目录下新建 `com.dark.demo.json`，写入以下模板：
+
+```json
+{
   "packageName": "com.dark.demo",
   "forceDark": true,
   "mainRule": 0,
   "forceDarkActivityConfigList": [],
   "forceDarkViewGlobalConfigList": []
-}`
+}
+```
 
-其中各个参数可参考 小米深色配置.xlsx 文件自行编辑多次测试。
+3. 根据实际效果调整各参数并多次测试（原《小米深色配置.xlsx》参数说明已过时，随仓库移除）
 
-## 捐赠
+</details>
 
-致谢：
-- 酷安@夜夜夜猫 
-- GITHUB@MidNightBlackCat 
-- GITHUB@dreamflandre
-> https://github.com/dreamflandre/DarkP/releases
-- 酷安支持我的小伙伴们
+## ❤️ 致谢
 
-如果你喜欢我这个项目，请多多提交Pr吧，谢谢！
+- 酷安 @夜夜夜猫
+- GitHub [@MidNightBlackCat](https://github.com/MidNightBlackCat)
+- GitHub [@dreamflandre](https://github.com/dreamflandre) —— MIUI 14 适配思路参考自 [DarkP](https://github.com/dreamflandre/DarkP/releases)
+- 安装脚本：酷安 @阿巴酱
+- 以及所有在酷安支持过这个项目的朋友们
 
-Made with ♥.
+喜欢本项目的话，欢迎提交 PR 或点亮 Star。完整更新记录见 [changelog.md](changelog.md)。
+
+## 📄 开源协议
+
+本项目基于 [MIT License](LICENSE) 开源。
+
+---
+
+<div align="center">
+
+**Made with ♥ by [f1owkang](https://github.com/f1owkang)**
+
+</div>
