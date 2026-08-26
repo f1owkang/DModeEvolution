@@ -1,13 +1,13 @@
 <div align="center">
 
-# 🌙 DarkMode Evolution
+# 🌙 DMode Evolution
 
 **为 MIUI 14 / 13 补全第三方应用深色模式的 Magisk 模块**
 
-[![Release](https://img.shields.io/github/v/release/f1owkang/DarkMode_Evolution?style=flat-square&label=Release&color=blue)](https://github.com/f1owkang/DarkMode_Evolution/releases)
-[![Downloads](https://img.shields.io/github/downloads/f1owkang/DarkMode_Evolution/total?style=flat-square&label=Downloads&color=green)](https://github.com/f1owkang/DarkMode_Evolution/releases)
-[![License](https://img.shields.io/github/license/f1owkang/DarkMode_Evolution?style=flat-square&color=orange)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/f1owkang/DarkMode_Evolution?style=flat-square)](https://github.com/f1owkang/DarkMode_Evolution/stargazers)
+[![Release](https://img.shields.io/github/v/release/f1owkang/DModeEvolution?style=flat-square&label=Release&color=blue)](https://github.com/f1owkang/DModeEvolution/releases)
+[![Downloads](https://img.shields.io/github/downloads/f1owkang/DModeEvolution/total?style=flat-square&label=Downloads&color=green)](https://github.com/f1owkang/DModeEvolution/releases)
+[![License](https://img.shields.io/github/license/f1owkang/DModeEvolution?style=flat-square&color=orange)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/f1owkang/DModeEvolution?style=flat-square)](https://github.com/f1owkang/DModeEvolution/stargazers)
 
 [支持应用](#支持应用) · [安装使用](#安装使用) · [进阶教程](#进阶教程) · [已知问题](#已知问题) · [致谢名单](#致谢名单)
 
@@ -49,7 +49,7 @@ MIUI 的强制深色模式默认仅覆盖少量系统应用，大量第三方应
 
 ## 安装使用
 
-1. 前往 [**Releases**](https://github.com/f1owkang/DarkMode_Evolution/releases) 下载最新 zip 包
+1. 前往 [**Releases**](https://github.com/f1owkang/DModeEvolution/releases) 下载最新 zip 包
 2. 打开 **Magisk** →「模块」→「从本地安装」，选择刚下载的 zip
 3. 安装过程中按提示用音量键确认（音量+ 安装 / 音量- 取消）
 4. 安装完成后重启手机
