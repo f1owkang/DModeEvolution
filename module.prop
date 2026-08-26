@@ -1,7 +1,7 @@
 id=DarkP_MIUI
-name=DarkMode Evolution
+name=DMode Evolution
 version=26.8
 versionCode=26
 author=lxdebug
-description=MIUI14/13深色模式补全，已经支持很多应用。Github:https://github.com/f1owkang/DarkMode_Evolution
-updateJson=https://raw.githubusercontent.com/f1owkang/DarkMode_Evolution/main/update.json
+description=MIUI14/13深色模式补全，已经支持很多应用。Github:https://github.com/f1owkang/DModeEvolution
+updateJson=https://raw.githubusercontent.com/f1owkang/DModeEvolution/main/update.json
