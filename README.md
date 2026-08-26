@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/github/license/f1owkang/DarkMode_Evolution?style=flat-square&color=orange)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/f1owkang/DarkMode_Evolution?style=flat-square)](https://github.com/f1owkang/DarkMode_Evolution/stargazers)
 
-[支持应用](#-支持应用) · [安装使用](#-安装使用) · [进阶教程](#-进阶教程) · [已知问题](#-已知问题) · [致谢](#-致谢)
+[支持应用](#支持应用) · [安装使用](#安装使用) · [进阶教程](#进阶教程) · [已知问题](#已知问题) · [致谢名单](#致谢名单)
 
 > [!WARNING]
 > **本项目已停止维护，仓库仅作存档保留。**<br>
@@ -19,7 +19,7 @@
 
 ---
 
-## ✨ 模块简介
+## 模块简介
 
 MIUI 的强制深色模式默认仅覆盖少量系统应用，大量第三方应用无缘深色。本模块通过补全 MIUI 的深色模式配置——总开关 `ForceDarkAppSettings.json` 与单应用增强配置 `forcedarkconfig/`——让更多应用接入系统级深色模式。刷入后，可在 **设置 → 显示 → 更多深色模式设置** 中按应用单独控制开关。
 
@@ -28,26 +28,26 @@ MIUI 的强制深色模式默认仅覆盖少量系统应用，大量第三方应
 - 通过音量键交互确认安装（音量+ 确认 / 音量- 取消）
 - 自动区分 MIUI 13（`system/etc`）与 MIUI 14（`system_ext/etc`）的配置路径，无需手动选择版本
 
-## 📱 支持应用
+## 支持应用
 
-😋 兼容良好　😔 效果一般　❓ 未经确认
+● 兼容良好　◐ 效果一般　○ 未经确认
 
 | 状态 | 应用 | 包名 |
 | :--: | :-- | :-- |
-| 😋 | 淘宝 | `com.taobao.taobao` |
-| 😋 | 学习通 | `com.chaoxing.mobile` |
-| 😔 | 闲鱼 | `com.taobao.idlefish` |
-| 😋 | 阿里巴巴 | `com.alibaba.wireless` |
-| 😔 | 铁路12306 | `com.MobileTicket` |
-| 😔 | 支付宝 | `com.eg.android.AlipayGphone` |
-| 😋 | 什么值得买 | `com.smzdm.client.android` |
-| 😔 | 抖音 | `com.ss.android.ugc.aweme` |
-| 😋 | 拼多多 | `com.xunmeng.pinduoduo` |
-| ❓ | 高德地图 | `com.autonavi.minimap` |
+| ● | 淘宝 | `com.taobao.taobao` |
+| ● | 学习通 | `com.chaoxing.mobile` |
+| ◐ | 闲鱼 | `com.taobao.idlefish` |
+| ● | 阿里巴巴 | `com.alibaba.wireless` |
+| ◐ | 铁路12306 | `com.MobileTicket` |
+| ◐ | 支付宝 | `com.eg.android.AlipayGphone` |
+| ● | 什么值得买 | `com.smzdm.client.android` |
+| ◐ | 抖音 | `com.ss.android.ugc.aweme` |
+| ● | 拼多多 | `com.xunmeng.pinduoduo` |
+| ○ | 高德地图 | `com.autonavi.minimap` |
 
 > 以上仅为部分示例，完整支持列表见模块内置的 [`ForceDarkAppSettings.json`](system/etc/ForceDarkAppSettings.json) 与 [`forcedarkconfig/`](system/etc/forcedarkconfig) 目录。
 
-## 🚀 安装使用
+## 安装使用
 
 1. 前往 [**Releases**](https://github.com/f1owkang/DarkMode_Evolution/releases) 下载最新 zip 包
 2. 打开 **Magisk** →「模块」→「从本地安装」，选择刚下载的 zip
@@ -55,12 +55,12 @@ MIUI 的强制深色模式默认仅覆盖少量系统应用，大量第三方应
 4. 安装完成后重启手机
 5. 进入 **设置 → 显示 → 更多深色模式设置**，为需要的应用打开开关
 
-## ⚠️ 已知问题
+## 已知问题
 
 - 部分应用的配置自 MIUI 14 起已失效；因项目停止维护，不再跟进修复
 - 抖音（`com.ss.android.ugc.aweme`）内测版已自带深色模式，无需本模块
 
-## 📖 简明教程
+## 简明教程
 
 <details>
 <summary><b>Q：如何让模块支持我想深色化的应用？</b></summary>
@@ -90,7 +90,7 @@ MIUI 通过两类配置文件控制应用的深色模式：
 
 </details>
 
-## 🛠️ 进阶教程
+## 进阶教程
 
 <details>
 <summary><b>Q：如何为应用编写增强配置文件？</b></summary>
@@ -114,7 +114,7 @@ MIUI 通过两类配置文件控制应用的深色模式：
 
 </details>
 
-## ❤️ 致谢
+## 致谢名单
 
 - 酷安 @夜夜夜猫
 - GitHub [@MidNightBlackCat](https://github.com/MidNightBlackCat)
@@ -124,7 +124,7 @@ MIUI 通过两类配置文件控制应用的深色模式：
 
 喜欢本项目的话，欢迎提交 PR 或点亮 Star。完整更新记录见 [changelog.md](changelog.md)。
 
-## 📄 开源协议
+## 开源协议
 
 本项目基于 [MIT License](LICENSE) 开源。
 
