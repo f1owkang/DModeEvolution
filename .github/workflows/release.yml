@@ -24,6 +24,5 @@ jobs:
       - name: 发布 Release
         uses: softprops/action-gh-release@v2
         with:
-          name: DMode Evolution ${{ github.ref_name }}
-          body_path: changelog.md
+          name: DarkMode Evolution ${{ github.ref_name }}
           files: dist/DarkE.zip
